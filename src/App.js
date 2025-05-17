@@ -4,21 +4,27 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Destinations from "./pages/Destinations";
 import DestinationDetails from "./pages/DestinationDetails";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import OTPLogin from "./pages/OTPLogin";
+import "./firebaseConfig"; // ✅ Ensure this file exists inside `src/`
+import ForgotPassword from "./pages/ForgotPassword";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/otp-login" element={<OTPLogin />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/destinations" element={<Destinations />} />
-        <Route path="/destinations/:id" element={<DestinationDetails />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/destination/:id" element={<DestinationDetails />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

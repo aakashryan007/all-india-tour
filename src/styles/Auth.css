@@ -1,0 +1,159 @@
+/* Auth Modal Styling */
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.auth-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-auth-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #565454;
+  transition: 0.3s;
+}
+
+.close-auth-btn:hover {
+  color: #e74c3c;
+}
+
+/* Welcome Message */
+.auth-content h2 {
+  color: #00796b;
+  margin-bottom: 5px;
+}
+
+.slogan {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.auth-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.google-btn,
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.google-btn {
+  background: #db4437;
+  color: white;
+}
+
+.google-btn:hover {
+  background: #c1351d;
+}
+
+.submit-btn {
+  background: #00796b;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #00574b;
+}
+
+/* OR Divider Styling */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  margin: 0 10px;
+}
+
+/* Forgot Password Styling */
+.forgot-password {
+  display: block;
+  margin: 10px 0;
+  color: #00796b;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  color: #00574b;
+}
+
+/* Toggle Between Signup & Login */
+.toggle-auth {
+  font-size: 14px;
+  color: #00796b;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.toggle-auth:hover {
+  text-decoration: underline;
+}
+
+/* Modal Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+  .auth-content {
+      width: 90%;
+  }
+}

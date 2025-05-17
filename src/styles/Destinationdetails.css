@@ -1,0 +1,31 @@
+.destination-details-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.destination-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.detail-image {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.destination-description {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.attractions-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attractions-list li {
+  font-size: 1rem;
+  padding: 5px;
+}
